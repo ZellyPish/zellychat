@@ -5,9 +5,8 @@ module.exports = {
     src: "/dist",
   },
   plugins: [
-    // "@snowpack/plugin-webpack",
     "@snowpack/plugin-react-refresh",
-    // "@snowpack/plugin-babel",
+    "@snowpack/plugin-babel",
     [
       "snowpack-plugin-import-map",
       {
@@ -25,14 +24,14 @@ module.exports = {
     // {"match": "routes", "src": ".*", "dest": "/index.html"},
   ],
   optimize: {
-    // bundle: true,
-    // minify: true,
+    bundle: true,
+    minify: true,
   },
   packageOptions: {
     source: "remote",
   },
   devOptions: {
-    /* ... */
+    open: "none",
   },
   buildOptions: {
     /* ... */

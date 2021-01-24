@@ -15,10 +15,10 @@ function App() {
   }, [count, setCount]);
 
   return (
-    <div className="App">
-      <header className="App-header">
+    <div>
+      <header>
         <h1>
-          Page has been open for <code css={blueColor}>{count}</code> seconds.
+          Page was opened before <code css={blueColor}>{count}</code> seconds.
         </h1>
       </header>
     </div>
