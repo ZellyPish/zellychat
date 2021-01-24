@@ -1,18 +1,18 @@
 /** @jsx jsx */
-import { useState, useEffect } from 'react';
-import { jsx, css } from '@emotion/react';
+import { useState, useEffect } from 'react'
+import { jsx, css } from '@emotion/react'
 
 const blueColor = css`
-color: blue
+  color: blue;
 `
 
 function App() {
-  const [count, setCount] = useState(0);
-  
+  const [count, setCount] = useState(0)
+
   useEffect(() => {
-    const timer = setTimeout(() => setCount(count + 1), 1000);
-    return () => clearTimeout(timer);
-  }, [count, setCount]);
+    const timer = setTimeout(() => setCount(count + 1), 1000)
+    return () => clearTimeout(timer)
+  }, [count, setCount])
 
   return (
     <div>
@@ -22,7 +22,7 @@ function App() {
         </h1>
       </header>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
