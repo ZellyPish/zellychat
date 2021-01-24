@@ -1,5 +1,5 @@
 {
-  "name": "snowpack-react-boilerplate",
+  "name": "react-snowpack-boilerplate",
   "version": "0.1.0",
   "description": "Simplified React boilerplate with snowpack and skypack",
   "main": "index.js",
@@ -24,5 +24,5 @@
     "prettier": "^2.2.1",
     "snowpack": "^3.0.1",
     "snowpack-plugin-import-map": "^1.1.4"
-  },
+  }
 }
