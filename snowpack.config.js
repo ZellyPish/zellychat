@@ -1,18 +1,24 @@
 /** @type {import("snowpack").SnowpackUserConfig } */
 module.exports = {
   mount: {
-    public: `/`,
-    src: `/dist`,
+    public: "/",
+    src: "/dist",
   },
   plugins: [
-    `@snowpack/plugin-react-refresh`,
-    `@snowpack/plugin-webpack`,
+    // "@snowpack/plugin-webpack",
+    "@snowpack/plugin-react-refresh",
+    // "@snowpack/plugin-babel",
     [
-      `@snowpack/plugin-babel`,
+      "snowpack-plugin-import-map",
       {
-        input: [`.js`, `.mjs`, `.jsx`, `.ts`, `.tsx`],
-      }
-    ]
+        imports: {
+          "react": true,
+          "react-dom": true,
+          "@emotion/react": true,
+          "@emotion/styled": true,
+        },
+      },
+    ],
   ],
   routes: [
     /* Enable an SPA Fallback in development: */
@@ -21,10 +27,9 @@ module.exports = {
   optimize: {
     // bundle: true,
     // minify: true,
-    // target: `es2021`,
   },
   packageOptions: {
-    source: `remote`,
+    source: "remote",
   },
   devOptions: {
     /* ... */

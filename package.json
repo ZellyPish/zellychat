@@ -4,6 +4,10 @@
     "build": "snowpack build"
   },
   "devDependencies": {
+    "@babel/preset-react": "^7.12.10",
+    "@snowpack/plugin-babel": "^2.1.6",
+    "@snowpack/plugin-react-refresh": "^2.4.0",
+    "@snowpack/plugin-webpack": "^2.3.0",
     "eslint": "^7.18.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^7.2.0",
@@ -13,16 +17,6 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "prettier": "^2.2.1",
     "snowpack": "^3.0.1",
-    "@snowpack/plugin-babel": "^2.1.6",
-    "@snowpack/plugin-react-refresh": "^2.4.0",
-    "@snowpack/plugin-webpack": "^2.3.0"
-  },
-  "dependencies": {
-    "@emotion/babel-preset-css-prop": "^11.0.0",
-    "@emotion/react": "^11.1.4",
-    "@emotion/styled": "^11.0.0",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-prop-types": "^0.4.0"
+    "snowpack-plugin-import-map": "^1.1.4"
   }
 }

@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { css } from '@emotion/react';
+/** @jsx jsx */
+import { useState, useEffect } from 'react';
+import { jsx, css } from '@emotion/react';
 
 const blueColor = css`
 color: blue
@@ -16,9 +17,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>
+        <h1>
           Page has been open for <code css={blueColor}>{count}</code> seconds.
-        </p>
+        </h1>
       </header>
     </div>
   );
