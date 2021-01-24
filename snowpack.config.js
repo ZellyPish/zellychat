@@ -15,6 +15,7 @@ module.exports = {
           "react-dom": true,
           "@emotion/react": true,
           "@emotion/styled": true,
+          "immer": true,
         },
       },
     ],
