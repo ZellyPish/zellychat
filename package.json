@@ -1,10 +1,14 @@
 {
   "name": "react-snowpack-boilerplate",
   "version": "0.1.0",
-  "description": "Simplified React boilerplate with snowpack and skypack",
+  "description": "Simplified React boilerplate with snowpack 3.0 and skypack CDN",
   "main": "index.js",
   "author": "ZellyPish <ehxhfl21@gmail.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ZellyPish/react-snowpack-boilerplate.git"
+  },
   "scripts": {
     "start": "snowpack dev",
     "build": "snowpack build"
