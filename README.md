@@ -6,6 +6,7 @@
 - [Snowpack 3.0](https://www.snowpack.dev/), The faster frontend build tool.
 - [Skypack CDN](https://www.skypack.dev/), Load optimized npm packages with no install and no build tools.
 - @emotion/react, @emotion/styled for CSS-in-JS
+- immer library
 - eslint and prettier
 
 ## Quick Start
@@ -14,6 +15,9 @@
 2. `cd <YOUR_PROJECT_NAME>`
 3. `yarn` or `npm install`
 4. `yarn start` or `npm start`
+
+### Build
+- `yarn build` or `npm build`
 
 ## How to:
 
