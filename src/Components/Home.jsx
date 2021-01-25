@@ -17,9 +17,9 @@ const Home = () => {
   return (
     <div>
       <header>
-        <h1>
+        <p>
           This page was opened before <code css={blueColor}>{count}</code> seconds.
-        </h1>
+        </p>
       </header>
     </div>
   )

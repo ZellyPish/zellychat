@@ -11,13 +11,14 @@ module.exports = {
     // "@snowpack/plugin-webpack",
     [
       "snowpack-plugin-import-map",
-      {
+      { 
         imports: {
           "react": true,
           "react-dom": true,
           "react-router-dom": true,
           "@emotion/react": true,
           "@emotion/styled": true,
+          "emotion-reset": true,
           "immer": true,
         },
       },
