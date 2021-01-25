@@ -19,7 +19,7 @@ module.exports = {
           "@emotion/react": true,
           "@emotion/styled": true,
           "emotion-reset": true,
-          "immer": true,
+          "@reduxjs/toolkit": true
         },
       },
     ],
@@ -29,8 +29,8 @@ module.exports = {
     // {"match": "routes", "src": ".*", "dest": "/index.html"},
   ],
   optimize: {
-    // bundle: true,
-    // minify: true,
+    bundle: true,
+    minify: true,
   },
   packageOptions: {
     source: "remote",
@@ -39,6 +39,6 @@ module.exports = {
     open: "none",
   },
   buildOptions: {
-    /* ... */
+    sourcemap: true,
   },
 };

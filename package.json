@@ -13,9 +13,10 @@
     "react",
     "snowpack",
     "skypack",
-    "immer",
+    "redux",
     "emotion",
-    "starter"
+    "starter",
+    "pwa"
   ],
   "scripts": {
     "start": "snowpack dev",
@@ -24,6 +25,7 @@
   },
   "devDependencies": {
     "@babel/preset-react": "^7.12.10",
+    "@snowpack/app-scripts-react": "^2.0.0",
     "@snowpack/plugin-babel": "^2.1.6",
     "@snowpack/plugin-dotenv": "^2.0.5",
     "@snowpack/plugin-react-refresh": "^2.4.0",
@@ -40,8 +42,9 @@
     "jest": "^26.6.3",
     "prettier": "^2.2.1",
     "snowpack": "^3.0.1",
-    "snowpack-plugin-import-map": "^1.1.4",
-    "workbox-build": "^6.0.2"
+    "snowpack-plugin-import-map": "^1.1.4"
   },
-  "dependencies": {}
+  "dependencies": {
+    "workbox-build": "^6.0.2"
+  }
 }

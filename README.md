@@ -2,14 +2,15 @@
 
 # ✨ ZellyPish's React BoilerPlate
 
-> React boilerplate with ❄Snowpack and 🚀Skypack CDN 
+> PWA available React boilerplate with ❄Snowpack and 🚀Skypack CDN
 
 ## Features:
+- Progressive Web App Available
 - [Snowpack 3.0](https://www.snowpack.dev/), The faster frontend build tool.
 - [Skypack CDN](https://www.skypack.dev/), Load optimized npm packages with no install and no build tools.
 - [Jest](https://jestjs.io/), delightful JavaScript Testing Framework with a focus on simplicity.
+- [Redux Toolkit](https://redux-toolkit.js.org/) for state management
 - @emotion/react, @emotion/styled for CSS-in-JS
-- immer library
 - eslint and prettier
 
 ## Quick Start

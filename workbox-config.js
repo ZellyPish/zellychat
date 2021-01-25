@@ -3,5 +3,7 @@ module.exports = {
   "globPatterns": [
     "**/*.{json,js,html}"
   ],
-  "swDest": "build/sw.js"
-};
+  "swDest": "build/sw.js",
+  "clientsClaim": "true",
+  "skipWaiting": "true"
+}
