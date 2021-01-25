@@ -5,15 +5,17 @@ module.exports = {
     src: "/dist",
   },
   plugins: [
-    '@snowpack/plugin-react-refresh',
-    '@snowpack/plugin-babel',
-    '@snowpack/plugin-dotenv',
+    "@snowpack/plugin-react-refresh",
+    "@snowpack/plugin-babel",
+    "@snowpack/plugin-dotenv",
+    // "@snowpack/plugin-webpack",
     [
       "snowpack-plugin-import-map",
       {
         imports: {
           "react": true,
           "react-dom": true,
+          "react-router-dom": true,
           "@emotion/react": true,
           "@emotion/styled": true,
           "immer": true,
