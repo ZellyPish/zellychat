@@ -1,3 +1,5 @@
+![license badge](https://img.shields.io/github/license/ZellyPish/react-snowpack-boilerplate) ![David](https://img.shields.io/david/zellypish/react-snowpack-boilerplate) ![David dev](https://img.shields.io/david/dev/zellypish/react-snowpack-boilerplate) ![PR badge](https://img.shields.io/badge/PR-Welcomes-red)
+
 # ✨ ZellyPish's React BoilerPlate
 
 > React boilerplate with ❄Snowpack and 🚀Skypack CDN 
