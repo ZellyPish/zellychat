@@ -5,8 +5,9 @@ module.exports = {
     src: "/dist",
   },
   plugins: [
-    "@snowpack/plugin-react-refresh",
-    "@snowpack/plugin-babel",
+    '@snowpack/plugin-react-refresh',
+    '@snowpack/plugin-babel',
+    '@snowpack/plugin-dotenv',
     [
       "snowpack-plugin-import-map",
       {

@@ -5,6 +5,7 @@
 ## Features:
 - [Snowpack 3.0](https://www.snowpack.dev/), The faster frontend build tool.
 - [Skypack CDN](https://www.skypack.dev/), Load optimized npm packages with no install and no build tools.
+- [Jest](https://jestjs.io/), delightful JavaScript Testing Framework with a focus on simplicity.
 - @emotion/react, @emotion/styled for CSS-in-JS
 - immer library
 - eslint and prettier
@@ -30,19 +31,24 @@ open `snowpack.config.js`, edit below `imports:`
 ##### 👇for example
 
 ```js
-imports: {
-          // ...
+// snowpack.config.js
 
-          "react": true, // this will add React to our project
+// ...
+{
+  imports: {
+            // ...
 
-          // ...
-        },
+            "redux": true, // this will add Redux to our project
+
+            // ...
+          },
+},
+// ...
 ```
 
 ## Known Issues:
 - HMR(Hot Module Replacement) not working [Related issue](https://github.com/snowpackjs/snowpack/discussions/2334)
 
 ## Todos:
-- Unit testing
 - Babel optimization
 - and more
