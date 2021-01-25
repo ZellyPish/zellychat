@@ -1,5 +1,5 @@
 {
-  "name": "react-snowpack-boilerplate",
+  "name": "react-snowpack-pwa",
   "version": "0.1.0",
   "description": "React PWA boilerplate with snowpack 3.0 and skypack CDN",
   "main": "index.js",
