@@ -1,7 +1,7 @@
 {
   "name": "react-snowpack-boilerplate",
   "version": "0.1.0",
-  "description": "React boilerplate with snowpack 3.0 and skypack CDN",
+  "description": "React PWA boilerplate with snowpack 3.0 and skypack CDN",
   "main": "index.js",
   "author": "ZellyPish <ehxhfl21@gmail.com>",
   "license": "MIT",
@@ -42,9 +42,7 @@
     "jest": "^26.6.3",
     "prettier": "^2.2.1",
     "snowpack": "^3.0.1",
-    "snowpack-plugin-import-map": "^1.1.4"
-  },
-  "dependencies": {
+    "snowpack-plugin-import-map": "^1.1.4",
     "workbox-build": "^6.0.2"
   }
 }
