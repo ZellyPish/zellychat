@@ -7,7 +7,7 @@
 ## Features:
 - Progressive Web App is Available
 - [Snowpack 3.0](https://www.snowpack.dev/), The faster frontend build tool.
-- [Skypack CDN](https://www.skypack.dev/).
+- [Skypack CDN](https://www.skypack.dev/) based package management system.
 - [Jest](https://jestjs.io/), delightful JavaScript Testing Framework with a focus on simplicity.
 - [Redux Toolkit](https://redux-toolkit.js.org/) for state management
 - [TailwindCSS](https://tailwindcss.com/), utility-first CSS framework
