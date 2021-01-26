@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "@emotion/react": "^11.1.4",
+    "@emotion/styled": "^11.0.0",
+    "@reduxjs/toolkit": "^1.5.0",
+    "emotion-reset": "^3.0.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-icons": "^4.1.0",
+    "react-router-dom": "^5.2.0"
+  },
+  "lock": {
+    "@emotion/react#^11.1.4": "@emotion/react@v11.1.4-0pm4g5UyI3uyXjpEWZEZ",
+    "@emotion/styled#^11.0.0": "@emotion/styled@v11.0.0-smVlguH8sEX2Um8HbMom",
+    "@reduxjs/toolkit#^1.5.0": "@reduxjs/toolkit@v1.5.0-FOpHRHBLr6alhez18JyN",
+    "emotion-reset#^3.0.0": "emotion-reset@v3.0.0-BqPJHXRS5XmwFBDmq600",
+    "react#^17.0.1": "react@v17.0.1-tOtrZxBRexARODgO0jli",
+    "react-dom#^17.0.1": "react-dom@v17.0.1-DtIXT56q6U8PbgLMrBhE",
+    "react-icons#^4.1.0": "react-icons@v4.1.0-REijSZ06bhLCgbLVhL2V",
+    "react-router-dom#^5.2.0": "react-router-dom@v5.2.0-7NPRxD2JoKcEDKk1zroV"
+  }
+}
