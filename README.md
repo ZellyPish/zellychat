@@ -1,21 +1,22 @@
-![license badge](https://img.shields.io/github/license/ZellyPish/react-snowpack-boilerplate) ![David](https://img.shields.io/david/zellypish/react-snowpack-boilerplate) ![David dev](https://img.shields.io/david/dev/zellypish/react-snowpack-boilerplate) ![PR badge](https://img.shields.io/badge/PR-Welcomes-red)
+![license badge](https://img.shields.io/github/license/ZellyPish/react-snowpack-pwa) ![David](https://img.shields.io/david/zellypish/react-snowpack-pwa) ![David dev](https://img.shields.io/david/dev/zellypish/react-snowpack-pwa) ![PR badge](https://img.shields.io/badge/PR-Welcomes-red)
 
 # ✨ ZellyPish's React BoilerPlate
 
 > PWA available React boilerplate with ❄Snowpack and 🚀Skypack CDN
 
 ## Features:
-- Progressive Web App Available
+- Progressive Web App is Available
 - [Snowpack 3.0](https://www.snowpack.dev/), The faster frontend build tool.
-- [Skypack CDN](https://www.skypack.dev/), Load optimized npm packages with no install and no build tools.
+- [Skypack CDN](https://www.skypack.dev/).
 - [Jest](https://jestjs.io/), delightful JavaScript Testing Framework with a focus on simplicity.
 - [Redux Toolkit](https://redux-toolkit.js.org/) for state management
+- [TailwindCSS](https://tailwindcss.com/), utility-first CSS framework
 - @emotion/react, @emotion/styled for CSS-in-JS
 - eslint and prettier
 
 ## Quick Start
 
-1. `git clone --depth=1 https://github.com/ZellyPish/react-snowpack-boilerplate.git <YOUR_PROJECT_NAME>`
+1. `git clone --depth=1 https://github.com/ZellyPish/react-snowpack-pwa.git <YOUR_PROJECT_NAME>`
 2. `cd <YOUR_PROJECT_NAME>`
 3. `yarn` or `npm install`
 4. `yarn start` or `npm start`
@@ -50,6 +51,7 @@ after `yarn pkginstall @emotion/react`, `snowpack.deps.json` has below codes.
 }
 ```
 
+<<<<<<< HEAD
 Editing this codes to
 
 ```json
@@ -62,3 +64,7 @@ Editing this codes to
   }
 }
 ```
+=======
+## Known Issues:
+- HMR(Hot Module Replacement) not working [Related issue](https://github.com/snowpackjs/snowpack/discussions/2334)
+>>>>>>> e1eb50d5223c35cae6ed9816d0981fe1d3b78289
