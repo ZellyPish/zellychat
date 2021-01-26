@@ -1,32 +1,13 @@
 {
   "extends": "@snowpack/app-scripts-react/babel.config.json",
   "presets": [
-    "@emotion/babel-preset-css-prop",
     ["@babel/preset-env", {"targets": {"node": "current"}}],
-    [
-      "@babel/preset-react", {
-        "runtime": "automatic",
-        "importSource": "@emotion/react"
-      }
-    ]
+    "@babel/preset-react",
+    "@emotion/babel-preset-css-prop"
   ],
   "plugins": [
     "babel-plugin-transform-inline-environment-variables",
-    "babel-preset-macros",
-    [
-      "@emotion/babel-plugin-jsx-pragmatic",
-      {
-        "export": "jsx",
-        "import": "__cssprop",
-        "module": "@emotion/react"
-      }
-    ],
-    [
-      "@babel/plugin-transform-react-jsx",
-      {
-        "pragma": "__cssprop",
-        "pragmaFrag": "React.Fragment"
-      }
-    ]
+    "babel-plugin-macros",
+    "@emotion/babel-plugin"
   ]
 }

@@ -6,12 +6,13 @@ module.exports = {
   },
   plugins: [
     "@snowpack/plugin-react-refresh",
-    // "@snowpack/plugin-babel",
+    "@snowpack/plugin-babel",
+    "@snowpack/plugin-postcss",
     // "@snowpack/plugin-dotenv",
     // "@snowpack/plugin-webpack",
     [
       "snowpack-plugin-import-map",
-      { 
+      {
         imports: {
           "react": true,
           "react-dom": true,
@@ -19,7 +20,7 @@ module.exports = {
           "@emotion/react": true,
           "@emotion/styled": true,
           "emotion-reset": true,
-          "@reduxjs/toolkit": true
+          "@reduxjs/toolkit": true,
         },
       },
     ],
@@ -41,4 +42,4 @@ module.exports = {
   buildOptions: {
     sourcemap: true,
   },
-};
+}

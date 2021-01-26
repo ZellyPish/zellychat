@@ -5,11 +5,12 @@
 > PWA available React boilerplate with ❄Snowpack and 🚀Skypack CDN
 
 ## Features:
-- Progressive Web App Available
+- Progressive Web App is Available
 - [Snowpack 3.0](https://www.snowpack.dev/), The faster frontend build tool.
-- [Skypack CDN](https://www.skypack.dev/), Load optimized npm packages with no install and no build tools.
+- [Skypack CDN](https://www.skypack.dev/).
 - [Jest](https://jestjs.io/), delightful JavaScript Testing Framework with a focus on simplicity.
 - [Redux Toolkit](https://redux-toolkit.js.org/) for state management
+- [TailwindCSS](https://tailwindcss.com/), utility-first CSS framework
 - @emotion/react, @emotion/styled for CSS-in-JS
 - eslint and prettier
 

@@ -4,11 +4,13 @@ import { Route, Link } from 'react-router-dom'
 import { jsx, css, Global } from '@emotion/react'
 import emotionReset from 'emotion-reset'
 
+import "./Styles/tailwind.css"
+
 import Home from './Components/Home'
 import About from './Components/About'
 
 const App = () => (
-  <React.Fragment>
+  <>
     <Global styles={css`
         ${emotionReset}
 
@@ -33,7 +35,7 @@ const App = () => (
       <Route path="/" exact component={Home} />
       <Route path="/about" component={About} />
     </div>
-  </React.Fragment>
+  </>
   )
 
 export default App

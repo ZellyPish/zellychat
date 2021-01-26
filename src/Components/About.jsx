@@ -1,14 +1,9 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react'
+import tw from 'twin.macro'
 
-const Home = () => (
-  <div>
-    <header>
-      <h1>
-        About Page.
-      </h1>
-    </header>
-  </div>
-  )
+const About = () => (
+  <p css={tw`text-xl`}>about</p>
+)
 
-export default Home
+export default About
