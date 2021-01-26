@@ -52,7 +52,3 @@ open `snowpack.config.js`, edit below `imports:`
 
 ## Known Issues:
 - HMR(Hot Module Replacement) not working [Related issue](https://github.com/snowpackjs/snowpack/discussions/2334)
-
-## Todos:
-- Babel optimization
-- and more
