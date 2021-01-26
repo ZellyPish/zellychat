@@ -7,7 +7,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/ZellyPish/react-snowpack-boilerplate.git"
+    "url": "git://github.com/ZellyPish/react-snowpack-pwa.git"
   },
   "keywords": [
     "react",
@@ -25,12 +25,17 @@
   },
   "devDependencies": {
     "@babel/preset-react": "^7.12.10",
+    "@emotion/babel-plugin-jsx-pragmatic": "^0.1.5",
+    "@emotion/babel-preset-css-prop": "^11.0.0",
     "@snowpack/app-scripts-react": "^2.0.0",
     "@snowpack/plugin-babel": "^2.1.6",
     "@snowpack/plugin-dotenv": "^2.0.5",
     "@snowpack/plugin-react-refresh": "^2.4.0",
     "@snowpack/plugin-webpack": "^2.3.0",
+    "autoprefixer": "^10.2.3",
     "babel-jest": "^26.6.3",
+    "babel-plugin-macros": "^3.0.1",
+    "babel-plugin-transform-inline-environment-variables": "^0.4.3",
     "eslint": "^7.18.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^7.2.0",
@@ -44,5 +49,7 @@
     "snowpack": "^3.0.1",
     "snowpack-plugin-import-map": "^1.1.4",
     "workbox-build": "^6.0.2"
+  },
+  "dependencies": {
   }
 }
