@@ -51,7 +51,6 @@ after `yarn pkginstall @emotion/react`, `snowpack.deps.json` has below codes.
 }
 ```
 
-<<<<<<< HEAD
 Editing this codes to
 
 ```json
@@ -64,7 +63,3 @@ Editing this codes to
   }
 }
 ```
-=======
-## Known Issues:
-- HMR(Hot Module Replacement) not working [Related issue](https://github.com/snowpackjs/snowpack/discussions/2334)
->>>>>>> e1eb50d5223c35cae6ed9816d0981fe1d3b78289
