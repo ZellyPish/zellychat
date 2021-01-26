@@ -1,4 +1,4 @@
-![license badge](https://img.shields.io/github/license/ZellyPish/react-snowpack-pwa) ![David](https://img.shields.io/david/zellypish/react-snowpack-pwa) ![David dev](https://img.shields.io/david/dev/zellypish/react-snowpack-react-snowpack-pwa) ![PR badge](https://img.shields.io/badge/PR-Welcomes-red)
+![license badge](https://img.shields.io/github/license/ZellyPish/react-snowpack-pwa) ![David](https://img.shields.io/david/zellypish/react-snowpack-pwa) ![David dev](https://img.shields.io/david/dev/zellypish/react-snowpack-pwa) ![PR badge](https://img.shields.io/badge/PR-Welcomes-red)
 
 # ✨ ZellyPish's React BoilerPlate
 
