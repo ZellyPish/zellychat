@@ -45,11 +45,19 @@
     "postcss-cli": "^8.3.1",
     "snowpack": "^3.0.1",
     "standard": "^16.0.3",
-    "tailwindcss": "^2.0.2",
-    "twin.macro": "^2.1.1",
+    "firebase": "^8.2.4",
     "workbox-build": "^6.0.2"
   },
   "dependencies": {
-    "react-icons": "^4.1.0"
+    "tailwindcss": "^2.0.2",
+    "twin.macro": "^2.1.1",
+    "@emotion/react": "^11.1.4",
+    "@emotion/styled": "^11.0.0",
+    "@reduxjs/toolkit": "^1.5.0",
+    "emotion-reset": "^3.0.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-icons": "^4.1.0",
+    "react-router-dom": "^5.2.0"
   }
 }

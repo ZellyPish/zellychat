@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { useState, useEffect } from 'react'
 import { jsx, css } from '@emotion/react'
-import { FaBeer } from 'react-icons/fa'
 
 const blueColor = css`
   color: blue;
@@ -17,12 +16,9 @@ const Home = () => {
 
   return (
     <div>
-      <header>
-        <FaBeer />
-        <p>
-          This page was opened before <code css={blueColor}>{count}</code> seconds.
-        </p>
-      </header>
+      <p>
+        This page was opened before <code css={blueColor}>{count}</code> seconds.
+      </p>
     </div>
   )
 }

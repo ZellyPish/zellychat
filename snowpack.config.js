@@ -19,7 +19,7 @@ module.exports = {
     minify: true
   },
   packageOptions: {
-    source: 'remote'
+    source: 'local'
   },
   devOptions: {
   },
