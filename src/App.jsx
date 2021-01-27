@@ -1,16 +1,17 @@
 /** @jsx jsx */
 import React from 'react'
-import { Route, Link } from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom'
 import { jsx, css, Global } from '@emotion/react'
 import emotionReset from 'emotion-reset'
 
-import "./Styles/tailwind.css"
+import './styles/tailwind.css'
 
-import Home from './Components/Home'
-import About from './Components/About'
+import Login from './components/Auth/Login/Login'
+import Register from './components/Auth/Register/Register'
+import Home from './components/Home'
 
 const App = () => (
-  <>
+  <React.Fragment>
     <Global styles={css`
         ${emotionReset}
 
@@ -22,20 +23,13 @@ const App = () => (
         }
       `}
     />
-    <div>
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/about">About</Link>
-        </li>
-      </ul>
-      <hr />
-      <Route path="/" exact component={Home} />
-      <Route path="/about" component={About} />
-    </div>
-  </>
-  )
+
+    <Switch>
+      <Route path='/login' component={Login} />
+      <Route path='/register' component={Register} />
+      <Route path='/' exact component={Home} />
+    </Switch>
+  </React.Fragment>
+)
 
 export default App
