@@ -10,7 +10,7 @@ const AuthLayout = ({ children, image }) => {
       <div css={tw`flex flex-row shadow-xl bg-purple-100 h-auto container rounded-xl overflow-hidden`}>
         <Link to='/' css={tw`absolute`}>
           <h1 css={tw`text-4xl my-4 mx-6 font-bold text-purple-700`}>
-            <RiChat1Fill />zellychat
+            <RiChat1Fill css={css`display: inline-block;`} />zellychat
           </h1>
         </Link>
         <div css={[tw`hidden grid grid-cols-1 content-center justify-center mx-12`, css`height: 38rem; width: 45rem;`]}>
