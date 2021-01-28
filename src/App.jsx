@@ -4,8 +4,8 @@ import { Switch, Route } from 'react-router-dom'
 import { jsx, css, Global } from '@emotion/react'
 import emotionReset from 'emotion-reset'
 
-import Login from './components/Auth/Login/Login'
-import Register from './components/Auth/Register/Register'
+import Login from './components/Auth/Login'
+import Register from './components/Auth/Register'
 import Home from './components/Home'
 import tw from 'twin.macro'
 

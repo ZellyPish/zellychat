@@ -2,6 +2,7 @@
 import { css, jsx } from '@emotion/react'
 import { Link } from 'react-router-dom'
 import tw from 'twin.macro'
+import { RiChat1Fill } from 'react-icons/ri'
 
 const AuthLayout = ({ children, image }) => {
   return (
@@ -9,7 +10,7 @@ const AuthLayout = ({ children, image }) => {
       <div css={tw`flex flex-row shadow-xl bg-purple-100 h-auto container rounded-xl overflow-hidden`}>
         <Link to='/' css={tw`absolute`}>
           <h1 css={tw`text-4xl my-4 mx-6 font-bold text-purple-700`}>
-            zellychat
+            <RiChat1Fill />zellychat
           </h1>
         </Link>
         <div css={[tw`hidden grid grid-cols-1 content-center justify-center mx-12`, css`height: 38rem; width: 45rem;`]}>
