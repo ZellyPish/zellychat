@@ -1,8 +1,10 @@
 /** @jsx jsx */
+import React from 'react'
 import { css, jsx } from '@emotion/react'
 import { Link } from 'react-router-dom'
 import tw from 'twin.macro'
 import { RiChat1Fill } from 'react-icons/ri'
+import ProgressiveImage from 'react-progressive-image-loading'
 
 const AuthLayout = ({ children, image }) => {
   return (
@@ -14,7 +16,11 @@ const AuthLayout = ({ children, image }) => {
           </h1>
         </Link>
         <div css={[tw`hidden grid grid-cols-1 content-center justify-center mx-12`, css`height: 38rem; width: 45rem;`]}>
-          <img src={image} alt='auth' css={tw`w-full`} />
+          <ProgressiveImage
+            preview={`images/thumbnails/${image}`}
+            src={`images/${image}`}
+            render={(src) => <img src={src} alt='auth' css={tw`w-full`} />}
+          />
         </div>
         <div css={tw`overflow-hidden bg-white w-96 border-gray-300 p-6`}>
           <div css={tw`grid h-full`}>
@@ -26,4 +32,4 @@ const AuthLayout = ({ children, image }) => {
   )
 }
 
-export default AuthLayout
+export default React.memo(AuthLayout)

@@ -8,7 +8,7 @@ import { Button, Input } from './Form'
 
 const Register = () => {
   return (
-    <AuthLayout image='images/login.png'>
+    <AuthLayout image='login.png'>
       <div css={tw`py-2 px-4 text-center`}>
         <h2 css={tw`text-2xl font-medium leading-6 text-gray-900`}>Sign In</h2>
       </div>
