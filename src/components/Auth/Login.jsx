@@ -1,9 +1,11 @@
 /** @jsx jsx */
 import React, { useState } from 'react'
 import { jsx } from '@emotion/react'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import tw from 'twin.macro'
 import { useForm } from 'react-hook-form'
+
+import firebase from '../../server/firebase'
 
 import AuthLayout from './AuthLayout'
 import { Button, Input } from './Form'
@@ -11,28 +13,26 @@ import { Button, Input } from './Form'
 const alertStyle = tw`absolute py-2 text-xs text-gray-600`
 
 const Login = () => {
-  const user = {
-    nickname: '',
-    email: '',
-    password: '',
-    confirmPassword: ''
-  }
-
-  const [userState, setUserState] = useState(user)
   const [errorState, setErrorState] = useState()
+  const [isLoading, setIsLoading] = useState(false)
+  const history = useHistory()
+
   const { register, handleSubmit } = useForm()
 
-  const handleInput = (e) => {
-    const target = e.target
-    setUserState((currentUserState) => {
-      const currentUser = { ...currentUserState }
-      currentUser[target.name] = target.value
-      return currentUser
-    })
-  }
-
   const onSubmit = (data) => {
-    console.log(data)
+    setIsLoading(true)
+    const { email, password } = data
+    firebase.auth()
+      .signInWithEmailAndPassword(email, password)
+      .then(user => {
+        setIsLoading(false)
+
+        history.push('/')
+      })
+      .catch(serverError => {
+        setIsLoading(false)
+        setErrorState(serverError)
+      })
   }
 
   return (
@@ -48,8 +48,6 @@ const Login = () => {
               name='email'
               auto='email'
               type='email'
-              value={userState.email}
-              onChange={handleInput}
               ref={register({ required: true })}
             />
           </div>
@@ -58,14 +56,13 @@ const Login = () => {
             <Input
               label='Password'
               name='password'
+              auto='password'
               type='password'
-              value={userState.password}
-              onChange={handleInput}
               ref={register({ required: true })}
             />
           </div>
           <div css={tw`col-end-4 justify-self-end`}>
-            <Button text='Sign In' type='submit' />
+            <Button text='Sign In' type='submit' isLoading={isLoading} />
           </div>
         </div>
         <p css={[alertStyle, tw`bottom-0`]}>{errorState?.message} </p>

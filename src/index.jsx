@@ -1,14 +1,16 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter, withRouter } from 'react-router-dom'
 import App from './App'
 
 import './styles/tailwind.css'
 
+const AppWithRouter = withRouter(App)
+
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+      <AppWithRouter />
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
