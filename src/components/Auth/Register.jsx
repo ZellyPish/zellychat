@@ -30,8 +30,7 @@ const Register = () => {
       .createUserWithEmailAndPassword(email, password)
       .then(createUser => {
         setIsLoading(false)
-        updateUserDetails(createUser, nickname, email)
-        history.push('/login')
+        updateUserDetails(createUser, nickname)
       })
       .catch(serverError => {
         setIsLoading(false)
@@ -39,17 +38,18 @@ const Register = () => {
       })
   }
 
-  const updateUserDetails = (createUser, nickname, email) => {
+  const updateUserDetails = (createUser, nickname) => {
     setIsLoading(true)
     if (createUser) {
       createUser.user.updateProfile({
         displayName: nickname,
-        photoURL: `https://gravatar.com/avatar/${email}?d=identicon`
+        photoURL: `https://avatars.dicebear.com/api/identicon/${createUser.user.uid}.svg`
       })
         .then(() => {
           saveUserInDB(createUser)
           setIsLoading(false)
           setErrorState(null)
+          history.push('/login')
         })
         .catch((serverError) => {
           setIsLoading(false)

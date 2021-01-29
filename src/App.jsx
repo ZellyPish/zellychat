@@ -14,7 +14,7 @@ import tw from 'twin.macro'
 const App = (props) => {
   useEffect(() => {
     firebase.auth().onAuthStateChanged((user) => {
-      if (user) {
+      if (user.photoURL) {
         props.history.push('/')
       }
     })
@@ -30,7 +30,7 @@ const App = (props) => {
         -webkit-font-smoothing: antialiased;
         font-smoothing: antialiased;
       }
-      body {${tw`font-sans bg-purple-200`}}
+      body {${tw`font-sans bg-purple-100`}}
     `}
       />
 

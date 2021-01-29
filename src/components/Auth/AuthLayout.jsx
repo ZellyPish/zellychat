@@ -9,10 +9,10 @@ import ProgressiveImage from 'react-progressive-image-loading'
 const AuthLayout = ({ children, image }) => {
   return (
     <div css={tw`w-screen h-screen grid content-center justify-center`}>
-      <div css={tw`flex flex-row shadow-xl bg-purple-100 h-auto container rounded-xl overflow-hidden`}>
+      <div css={tw`flex flex-row shadow-xl bg-purple-200 h-auto container rounded-xl overflow-hidden`}>
         <Link to='/' css={tw`absolute`}>
           <h1 css={tw`text-4xl my-4 mx-6 font-bold text-purple-700`}>
-            <RiChat1Fill css={css`display: inline-block;`} />zellychat
+            <RiChat1Fill css={tw`inline-block mr-2`} />zellychat
           </h1>
         </Link>
         <div css={[tw`hidden grid grid-cols-1 content-center justify-center mx-12`, css`height: 38rem; width: 45rem;`]}>
