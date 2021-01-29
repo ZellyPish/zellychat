@@ -49,6 +49,8 @@ const Register = () => {
           saveUserInDB(createUser)
           setIsLoading(false)
           setErrorState(null)
+        })
+        .then(() => {
           history.push('/login')
         })
         .catch((serverError) => {

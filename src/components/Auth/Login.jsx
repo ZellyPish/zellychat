@@ -34,6 +34,7 @@ const Login = () => {
       .catch(serverError => {
         setIsLoading(false)
         setErrorState(serverError)
+        console.log(errorState)
       })
   }
 
