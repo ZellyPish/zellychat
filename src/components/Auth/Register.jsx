@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react'
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { useHistory } from 'react-router-dom'
 import tw from 'twin.macro'
@@ -13,34 +13,18 @@ import { Button, Input } from './Form'
 const alertStyle = tw`absolute py-2 text-xs text-gray-600`
 
 const Register = () => {
-  const user = {
-    nickname: '',
-    email: '',
-    password: '',
-    confirmPassword: ''
-  }
-
   const userCollectionRef = firebase.database().ref('users')
 
-  const [userState, setUserState] = useState(user)
   const [errorState, setErrorState] = useState()
   const [isLoading, setIsLoading] = useState(false)
   const history = useHistory()
 
-  const { register, handleSubmit, errors } = useForm()
-
-  const handleInput = (e) => {
-    const target = e.target
-    setUserState((currentUserState) => {
-      const currentUser = { ...currentUserState }
-      currentUser[target.name] = target.value
-      return currentUser
-    })
-  }
+  const { register, handleSubmit, errors, watch } = useForm()
+  const password = useRef({})
+  password.current = watch('password', '')
 
   const onSubmit = (data) => {
     setIsLoading(true)
-    console.log(data)
     const { nickname, email, password } = data
     firebase.auth()
       .createUserWithEmailAndPassword(email, password)
@@ -94,7 +78,6 @@ const Register = () => {
               name='nickname'
               type='text'
               auto='nickname'
-              onChange={handleInput}
               ref={register({ required: true, maxLength: 16 })}
             />
             {errors.nickname && <p css={alertStyle}>Nickname should be less than 16 characters</p>}
@@ -106,7 +89,6 @@ const Register = () => {
               name='email'
               auto='email'
               type='email'
-              onChange={handleInput}
               ref={register({ required: true })}
             />
             {errors.email && <p css={alertStyle}>Email is required</p>}
@@ -116,8 +98,8 @@ const Register = () => {
             <Input
               label='Password'
               name='password'
+              auto='password'
               type='password'
-              onChange={handleInput}
               ref={register({ required: true, maxLength: 16, minLength: 8 })}
             />
             {errors.password && <p css={alertStyle}>Password characters should be between 8 and 16</p>}
@@ -127,9 +109,9 @@ const Register = () => {
             <Input
               label='Confirm Password'
               name='confirmPassword'
+              auto='password'
               type='password'
-              onChange={handleInput}
-              ref={register({ required: true, maxLength: 16, minLength: 8, validate: value => value === userState.password })}
+              ref={register({ required: true, maxLength: 16, minLength: 8, validate: value => value === password.current })}
             />
             {errors.confirmPassword && <p css={alertStyle}>Password doesn't match</p>}
           </div>
