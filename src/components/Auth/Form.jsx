@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import React from 'react'
-import { css, jsx } from '@emotion/react'
+import { jsx } from '@emotion/react'
 import tw from 'twin.macro'
 
 const labelStyle = tw`block text-sm font-medium text-gray-700 py-1`
@@ -15,7 +15,7 @@ const InputComponent = React.forwardRef(({ label, name, type, value, auto = '', 
 ))
 
 const ButtonComponent = ({ text, type, isLoading }) => (
-  <button type={type} css={buttonStyle}>
+  <button type={type} css={buttonStyle} disabled={isLoading}>
     {isLoading
       ? <img src='animations/loading-sm.svg' alt='Loading' css={tw`h-full mx-auto`} />
       : text}

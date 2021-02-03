@@ -13,7 +13,11 @@ import tw from 'twin.macro'
 
 const App = (props) => {
   useEffect(() => {
-    firebase.auth().onAuthStateChanged((user) => user && props.history.push('/'))
+    firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+        props.history.push('/')
+      }
+    })
   }, [])
   return (
     <React.Fragment>

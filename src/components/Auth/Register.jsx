@@ -25,12 +25,12 @@ const Register = () => {
 
   const onSubmit = (data) => {
     setIsLoading(true)
-    const { nickname, email, password } = data
+    const { nickname, email, password, uid } = data
     firebase.auth()
       .createUserWithEmailAndPassword(email, password)
       .then(createUser => {
         setIsLoading(false)
-        updateUserDetails(createUser, nickname)
+        updateUserDetails(createUser, nickname, uid)
       })
       .catch(serverError => {
         setIsLoading(false)
@@ -38,12 +38,13 @@ const Register = () => {
       })
   }
 
-  const updateUserDetails = (createUser, nickname) => {
+  const updateUserDetails = (createUser, nickname, uid) => {
     setIsLoading(true)
     if (createUser) {
       createUser.user.updateProfile({
         displayName: nickname,
-        photoURL: `https://avatars.dicebear.com/api/identicon/${createUser.user.uid}.svg`
+        photoURL: `https://avatars.dicebear.com/api/identicon/${createUser.user.uid}.svg`,
+        uid: uid
       })
         .then(() => {
           saveUserInDB(createUser)
