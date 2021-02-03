@@ -1,11 +1,16 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react'
+import tw from 'twin.macro'
 
-import SideBar from './SideBar'
+import SideBar from './Sidebar/SideBar'
+import Chat from './Chat'
 
 const Home = () => {
   return (
-    <SideBar />
+    <div css={tw`flex`}>
+      <SideBar />
+      <Chat />
+    </div>
   )
 }
 
