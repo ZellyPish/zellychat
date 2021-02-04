@@ -1,24 +1,15 @@
 /** @jsx jsx */
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import { jsx, css, Global } from '@emotion/react'
 import emotionReset from 'emotion-reset'
-
-import firebase from './server/firebase'
 
 import Login from './components/Auth/Login'
 import Register from './components/Auth/Register'
 import Home from './components/Home'
 import tw from 'twin.macro'
 
-const App = (props) => {
-  useEffect(() => {
-    firebase.auth().onAuthStateChanged((user) => {
-      if (user) {
-        props.history.push('/')
-      }
-    })
-  }, [])
+const App = () => {
   return (
     <React.Fragment>
       <Global styles={css`

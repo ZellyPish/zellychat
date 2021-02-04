@@ -47,11 +47,7 @@ const Register = () => {
         uid: uid
       })
         .then(() => {
-          saveUserInDB(createUser)
           setIsLoading(false)
-          setErrorState(null)
-        })
-        .then(() => {
           history.push('/login')
         })
         .catch((serverError) => {
@@ -59,13 +55,6 @@ const Register = () => {
           setErrorState(serverError)
         })
     }
-  }
-
-  const saveUserInDB = (createUser) => {
-    userCollectionRef.child(createUser.user.uid).set({
-      displayName: createUser.user.displayName,
-      photoURL: createUser.user.photoURL
-    })
   }
 
   return (

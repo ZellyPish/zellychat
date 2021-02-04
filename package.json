@@ -65,6 +65,7 @@
     "react-redux": "^7.2.2",
     "react-redux-firebase": "^3.10.0",
     "react-router-dom": "^5.2.0",
+    "react-time-ago": "^6.2.2",
     "tailwindcss": "^2.0.2",
     "twin.macro": "^2.1.1"
   }

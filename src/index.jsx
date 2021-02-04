@@ -3,11 +3,16 @@ import ReactDOM from 'react-dom'
 import { BrowserRouter, withRouter } from 'react-router-dom'
 import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3'
 import { Provider } from 'react-redux'
+import TimeAgo from 'javascript-time-ago'
+
+import en from 'javascript-time-ago/locale/en'
 
 import App from './App'
 import store from './redux/store'
 
 import './styles/tailwind.css'
+
+TimeAgo.addDefaultLocale(en)
 
 const AppWithRouter = withRouter(App)
 
