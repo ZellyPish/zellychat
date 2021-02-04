@@ -13,8 +13,6 @@ import { Button, Input } from './Form'
 const alertStyle = tw`absolute py-2 text-xs text-gray-600`
 
 const Register = () => {
-  const userCollectionRef = firebase.database().ref('users')
-
   const [errorState, setErrorState] = useState()
   const [isLoading, setIsLoading] = useState(false)
   const history = useHistory()

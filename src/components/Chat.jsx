@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react'
-import { FaCode, FaInfoCircle } from 'react-icons/fa'
 import tw from 'twin.macro'
 
 import ChatHeader from './ChatHeader'

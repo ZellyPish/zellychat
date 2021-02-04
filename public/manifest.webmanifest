@@ -1,7 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "React App Sample",
-  "description": "Hello World!",
+  "short_name": "zellychat",
+  "name": "zellychat",
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#8668ED",

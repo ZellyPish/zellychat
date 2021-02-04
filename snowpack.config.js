@@ -15,8 +15,6 @@ module.exports = {
     { match: 'routes', src: '.*', dest: '/index.html' }
   ],
   optimize: {
-    bundle: true,
-    minify: true
   },
   packageOptions: {
     source: 'local'

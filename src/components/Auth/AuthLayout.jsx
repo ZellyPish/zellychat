@@ -22,7 +22,7 @@ const AuthLayout = ({ children, image }) => {
             render={(src) => <img src={src} alt='auth' css={tw`w-full`} />}
           />
         </div>
-        <div css={tw`overflow-hidden bg-white w-96 border-gray-300 p-6`}>
+        <div css={tw`overflow-hidden bg-white w-96 border border-gray-300 p-6`}>
           <div css={tw`grid h-full`}>
             {children}
           </div>
