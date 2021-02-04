@@ -4,19 +4,14 @@ import tw from 'twin.macro'
 
 import { FaRegComments } from 'react-icons/fa'
 
-import firebase from '../../server/firebase'
-
 import { useDispatch } from 'react-redux'
-import { setCurrentChannel } from '../../redux/channel'
+import { setCurrentChannelId } from '../../redux/channel'
 
 const ChannelMenu = ({ text, id }) => {
   const dispatch = useDispatch()
 
   const onClick = () => {
-    const docRef = firebase.firestore().collection('rooms').doc(id)
-    docRef.get().then((doc) => {
-      dispatch(setCurrentChannel(doc.data()))
-    })
+    dispatch(setCurrentChannelId(id))
   }
 
   return (
