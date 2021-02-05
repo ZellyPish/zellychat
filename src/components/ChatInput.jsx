@@ -7,7 +7,7 @@ import { useForm } from 'react-hook-form'
 import firebase from '../server/firebase'
 
 const inputStyle = tw`w-11/12 h-12 border-0 focus:ring-0 focus:outline-none px-4`
-const buttonStyle = tw`w-1/12 h-12 px-5 text-purple-100 transition-colors duration-150 bg-purple-700 focus:shadow hover:bg-purple-800`
+const buttonStyle = tw`w-1/12 h-12 px-5 text-purple-100 transition-colors duration-150 bg-purple-700 focus:shadow hover:bg-purple-800 focus:ring-0 focus:outline-none`
 
 const ChatInput = ({ channelName, channelId }) => {
   const user = useSelector(state => state.user)
@@ -25,8 +25,8 @@ const ChatInput = ({ channelName, channelId }) => {
     user.nickname
       ? <div>
         <form onSubmit={handleSubmit(sendMessage)}>
-          <div css={tw`fixed bottom-0 w-5/6`}>
-            <input type='text' name='message' placeholder={`Message to #${channelName}`} ref={register({ required: true })} css={inputStyle} onSubmit={(e) => { e.currentTarget.value = '' }} />
+          <div css={tw`fixed bottom-0 w-5/6 shadow`}>
+            <input type='text' name='message' placeholder={`Message to #${channelName}`} ref={register({ required: true })} css={inputStyle} autoComplete='off' />
             <button type='submit' css={buttonStyle}>Send</button>
           </div>
         </form>

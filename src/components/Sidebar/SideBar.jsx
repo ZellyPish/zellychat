@@ -33,7 +33,7 @@ const SideBar = () => {
   }
 
   return (
-    <div css={tw`flex flex-col h-screen w-1/6 bg-purple-500`}>
+    <div css={tw`flex flex-col h-screen w-1/6 bg-purple-500 z-10`}>
       <Link to='/'>
         <h1 css={tw`text-4xl m-4 font-bold text-purple-200`}>
           <RiChat1Fill css={tw`inline-block mr-2`} />zellychat
